@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/titleField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/just_linear_layout"
+        android:textSize="@dimen/profile" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/toCoordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/to_coordinator"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/toConstraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/to_constraint"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/toFragments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/to_fragments"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_start_xml_constraintlayout_scene">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="78dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginTop="93dp"
+            android:layout_marginEnd="264dp"
+            android:layout_marginBottom="503dp"
+            android:background="#BD1414"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</LinearLayout>
